@@ -8,5 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class DominoSolverTest {
 
+	private static DominoSolverInt dominoSolver;
+
+	@BeforeEach
+    public void setUp() throws Exception {
+        dominoSolver = new DominoSolver();
+    }
+   
    
 }
