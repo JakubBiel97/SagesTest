@@ -15,5 +15,9 @@ public class DominoSolverTest {
         dominoSolver = new DominoSolver();
     }
    
-   
+	@Test
+	@DisplayName("Simple domino solving")
+	public void testSimpleDomino() {
+		assertEquals("//|", dominoSolver.solve("/||"));
+	}
 }
