@@ -20,4 +20,19 @@ public class DominoSolverTest {
 	public void testSimpleDomino() {
 		assertEquals("//|", dominoSolver.solve("/||"));
 	}
+	
+	@Test
+    @DisplayName("Wrong input test")
+    public void testWrongInput() {
+        assertEquals("Spotted wrong character - cannot solve domino",
+                dominoSolver.solve("/asd||"));
+    }
+
+    @Test
+    @DisplayName("Ensure correct handling multiple iterations")
+    public void testMultiplyIterations() {
+        assertEquals("///", dominoSolver.solve("/||",2));
+    }
+	
+	
 }
