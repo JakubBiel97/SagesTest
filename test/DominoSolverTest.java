@@ -34,5 +34,40 @@ public class DominoSolverTest {
         assertEquals("///", dominoSolver.solve("/||",2));
     }
 	
+	@Test
+    @DisplayName("Ensure correct handling of complex input without iterations")
+    public void testComplexSolutionsWithoutIterations() {
+        assertEquals("||///\\\\||/\\|", dominoSolver.solve("||//||\\||/\\|"));
+    }
+
+    @Test
+    @DisplayName("Ensure correct handling of complex input with iterations")
+    public void testComplexSolutionsWithIterations() {
+        assertEquals("||////\\\\\\|////|", dominoSolver.solve("||//||||\\|//|||", 2));
+    }
+
+    @Test
+    @DisplayName("Simple reverse domino solving")
+    public void testSimpleReverseDomino() {
+        assertEquals("//|", dominoSolver.reverseSolving("///"));
+    }
+
+    @Test
+    @DisplayName("Simple reverse domino solving with iterations")
+    public void testSimpleReverseDominoWithIterations() {
+        assertEquals("/||", dominoSolver.reverseSolving("///", 2));
+    }
+
+    @Test
+    @DisplayName("Simple reverse domino with backslash solving")
+    public void testSimpleReverseDominoBackslash() {
+        assertEquals("||\\", dominoSolver.reverseSolving("|\\\\"));
+    }
+
+    @Test
+    @DisplayName("Complex reversing domino solving")
+    public void testComplexReverseDominoSolving() {
+        assertEquals("||//||||\\|//|||", dominoSolver.reverseSolving("||////\\\\\\|////|", 2));
+    }
 	
 }
