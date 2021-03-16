@@ -7,5 +7,7 @@ public class main {
 
         String example  = "||//||\\||/\\|";
         System.out.println("Solution: " + dominoSolver.solve(example, 2));
+		example = dominoSolver.solve(example, 2);
+        System.out.println("Solution: " + dominoSolver.reverseSolving(example, 2));
     }
 }
